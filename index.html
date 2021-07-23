@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS Grid Layout</title>
+  <link rel="stylesheet" href="css/style.css" media="all" />
+</head>
+
+<body>
+  <div class="group-row-reverse column column-reverse">
+    <div class="group">
+      <div class="flex column column-reverse">
+        <div>
+          <h1 class="title">Grid Container - display</h1>
+          <div class="big-block ">
+            <div class="block">
+              <div>
+                <h1>display: block;</h1>
+                <section class="grid">
+                  <div class="item">1</div>
+                  <div class="item">2</div>
+                  <div class="item">3</div>
+                  <div class="item">4</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-template-columns: 200px 200px;</h1>
+                <section class="grid grid-template-columns">
+                  <div class="item">1</div>
+                  <div class="item">2</div>
+                  <div class="item">3</div>
+                  <div class="item">4</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-template-columns: 1fr 2fr 1fr;</h1>
+                <section class="grid grid-template-columns">
+                  <div class="item">1</div>
+                  <div class="item">2</div>
+                  <div class="item">3</div>
+                  <div class="item">4</div>
+                  <div class="item">5</div>
+                  <div class="item">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>subgrid</h1>
+                <section class="grid grid-template-columns">
+                  <div class="item">1</div>
+                  <div class="item">2</div>
+                  <div class="item">3</div>
+                  <div class="item">4</div>
+                  <div class="item subgrid">
+                    <div>5.1</div>
+                    <div>5.2</div>
+                    <div>5.3</div>
+                  </div>
+                  <div class="item">6</div>
+                </section>
+              </div>
+            </div>
+          </div> <!-- End big-block -->
+        </div> <!-- end div-->
+
+        <div>
+          <h1 class="title">Grid Container - grid-template-columns</h1>
+          <div class="big-block  ">
+            <div class="block ">
+              <div>
+                <h1>grid-template-columns: 100px 100px 100px 100px;</h1>
+                <section class="grid grid-template-columns-1">
+                  <div class="item">1</div>
+                  <div class="item">2</div>
+                  <div class="item">3</div>
+                  <div class="item">4</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-template-columns: 100px 100px 100px 100px;</h1>
+                <section class="grid grid-template-columns-1">
+                  <div class="item">Test Word Test</div>
+                  <div class="item">2</div>
+                  <div class="item">3</div>
+                  <div class="item">TestWordTest</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-template-columns: 1fr 2fr;</h1>
+                <section class="grid grid-template-columns-2">
+                  <div class="item">1</div>
+                  <div class="item">2</div>
+                  <div class="item">3</div>
+                  <div class="item">4</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-template-columns: 1fr 2fr;</h1>
+                <section class="grid grid-template-columns-2">
+                  <div class="item">TestWordBiggestTest</div>
+                  <div class="item">2</div>
+                  <div class="item">3</div>
+                  <div class="item">4</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-template-columns: minmax(200px, 1fr) 1fr 1fr;</h1>
+                <section class="grid grid-template-columns-3">
+                  <div class="item">1</div>
+                  <div class="item">2</div>
+                  <div class="item">3</div>
+                  <div class="item">4</div>
+                  <div class="item">5</div>
+                  <div class="item">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-template-columns: minmax(200px, 1fr) 1fr 1fr;</h1>
+                <section class="grid grid-template-columns-3">
+                  <div class="item">TestWordBiggestTest01</div>
+                  <div class="item">2</div>
+                  <div class="item">3</div>
+                  <div class="item">4</div>
+                  <div class="item">5</div>
+                  <div class="item">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-template-columns: minmax(200px, 1fr) 1fr 1fr;</h1>
+                <section class="grid grid-template-columns-3">
+                  <div class="item">1</div>
+                  <div class="item">TestWordBiggestTest01</div>
+                  <div class="item">3</div>
+                  <div class="item">4</div>
+                  <div class="item">5</div>
+                  <div class="item">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-template-columns: repeat(3, 1fr);</h1>
+                <section class="grid grid-template-columns-4">
+                  <div class="item">1</div>
+                  <div class="item">2</div>
+                  <div class="item">3</div>
+                  <div class="item">4</div>
+                  <div class="item">5</div>
+                  <div class="item">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-template-columns: repeat(auto-fit, 100px);</h1>
+                <section class="grid grid-template-columns-5">
+                  <div class="item">1</div>
+                  <div class="item">2</div>
+                  <div class="item">3</div>
+                  <div class="item">4</div>
+                  <div class="item">5</div>
+                  <div class="item">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-template-columns: repeat(auto-fit, minmax(100px, auto));</h1>
+                <section class="grid grid-template-columns-6">
+                  <div class="item">TestWordBiggest</div>
+                  <div class="item">2</div>
+                  <div class="item">3</div>
+                  <div class="item">4</div>
+                  <div class="item">5</div>
+                  <div class="item">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-template-columns: repeat(auto-fill, minmax(100px, auto));</h1>
+                <section class="grid grid-template-columns-7">
+                  <div class="item">TestWordBiggest</div>
+                  <div class="item">2</div>
+                  <div class="item">3</div>
+                  <div class="item">4</div>
+                  <div class="item">5</div>
+                  <div class="item">6</div>
+                </section>
+              </div>
+            </div> <!-- end block -->
+          </div> <!-- End big-block -->
+        </div> <!-- end div-->
+
+        <div>
+          <h1 class="title">Grid Container - grid-template-rows</h1>
+          <div class="big-block  ">
+            <div class="block ">
+              <div>
+                <h1>grid-template-rows: 50px 100px 50px 150px; <br> two equal size (1fr) columns</h1>
+                <section class="grid grid-template-columns-eq-2 grid-template-rows-1">
+                  <div class="item">1</div>
+                  <div class="item">2</div>
+                  <div class="item">3</div>
+                  <div class="item">4</div>
+                  <div class="item">5</div>
+                  <div class="item">6</div>
+                  <div class="item">7</div>
+                  <div class="item">8</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-template-rows: 100px 100px 20px; <br> two equal size (1fr) columns</h1>
+                <section class="grid grid-template-columns-eq-2 grid-template-rows-2">
+                  <div class="item">1</div>
+                  <div class="item">2</div>
+                  <div class="item">3</div>
+                  <div class="item">4</div>
+                  <div class="item">5</div>
+                  <div class="item">6</div>
+                  <div class="item">7</div>
+                  <div class="item">8</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-template-rows: 1fr 2fr 1fr 3fr;</h1>
+                <section class="grid grid-template-columns-eq-2 grid-template-rows-3">
+                  <div class="item">1</div>
+                  <div class="item">2</div>
+                  <div class="item">3</div>
+                  <div class="item">4</div>
+                  <div class="item">5</div>
+                  <div class="item">6</div>
+                  <div class="item">7</div>
+                  <div class="item">8</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-template-columns / grid-template-rows</h1>
+                <section class="grid  grid-template-rows-3">
+                  <div class="item">1</div>
+                  <div class="item">2</div>
+                  <div class="item">3</div>
+                  <div class="item">4</div>
+                  <div class="item">5</div>
+                  <div class="item">6</div>
+                  <div class="item">7</div>
+                  <div class="item">8</div>
+                </section>
+              </div>
+
+            </div> <!-- end block -->
+          </div> <!-- End big-block -->
+        </div> <!-- end div-->
+
+        <div>
+          <h1 class="title">Grid Container - grid-template-areas</h1>
+          <div class="big-block  ">
+            <div class="block ">
+              <div>
+                <h1>grid-template-areas</h1>
+                <section class="grid grid-template-areas-1">
+                  <div class="item logo">logo</div>
+                  <div class="item nav">nav</div>
+                  <div class="item content">content</div>
+                  <div class="item sidenav">sidenav</div>
+                  <div class="item advert">advert</div>
+                  <div class="item footer">footer</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-template-areas</h1>
+                <section class="grid grid-template-areas-2">
+                  <div class="item logo">logo</div>
+                  <div class="item nav">nav</div>
+                  <div class="item content">content</div>
+                  <div class="item sidenav">sidenav</div>
+                  <div class="item advert">advert</div>
+                  <div class="item footer">footer</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-template-areas (mobile)</h1>
+                <section class="grid grid-template-areas-3">
+                  <div class="item logo">logo</div>
+                  <div class="item nav">nav</div>
+                  <div class="item content">content</div>
+                  <div class="item sidenav">sidenav</div>
+                  <div class="item advert">advert</div>
+                  <div class="item footer">footer</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-template-areas (rows and columns)</h1>
+                <section class="grid grid-template-areas-4">
+                  <div class="item logo">logo</div>
+                  <div class="item nav">nav</div>
+                  <div class="item content">content</div>
+                  <div class="item sidenav">sidenav</div>
+                  <div class="item advert">advert</div>
+                  <div class="item footer">footer</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-template-areas ( . for empty areas)</h1>
+                <section class="grid grid-template-areas-4">
+                  <div class="item logo">logo</div>
+                  <div class="item nav">nav</div>
+                  <div class="item content">content</div>
+                  <div class="item sidenav">sidenav</div>
+                  <div class="item advert">advert</div>
+                  <div class="item footer">footer</div>
+                </section>
+              </div>
+
+            </div> <!-- end block -->
+          </div> <!-- End big-block -->
+        </div> <!-- end div-->
+
+        <div>
+          <h1 class="title">Grid Container - grid-template</h1>
+          <div class="big-block  ">
+            <div class="block ">
+              <div>
+                <h1>grid-template: 50px 1fr / 100px 1fr 100px;</h1>
+                <section class="grid grid-template-1">
+                  <div class="item ">logo</div>
+                  <div class="item ">nav</div>
+                  <div class="item ">content</div>
+                  <div class="item ">sidenav</div>
+                  <div class="item ">advert</div>
+                  <div class="item ">footer</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-template: (areas, columns and rows)</h1>
+                <section class="grid grid-template-2">
+                  <div class="item logo">logo</div>
+                  <div class="item nav">nav</div>
+                  <div class="item content">content</div>
+                  <div class="item sidenav">sidenav</div>
+                  <div class="item advert">advert</div>
+                  <div class="item footer">footer</div>
+                </section>
+              </div>
+
+            </div> <!-- end block -->
+          </div> <!-- End big-block -->
+        </div> <!-- end div-->
+
+        <div>
+          <h1 class="title">Grid Container - gap</h1>
+          <div class="big-block  ">
+            <div class="block ">
+              <div>
+                <h1>gap: 20px;</h1>
+                <section class="grid grid-template-2 gap">
+                  <div class="item logo">logo</div>
+                  <div class="item nav">nav</div>
+                  <div class="item content">content</div>
+                  <div class="item sidenav">sidenav</div>
+                  <div class="item advert">advert</div>
+                  <div class="item footer">footer</div>
+                </section>
+              </div>
+              <div>
+                <h1>column-gap: 20px;</h1>
+                <section class="grid grid-template-2 column-gap">
+                  <div class="item logo">logo</div>
+                  <div class="item nav">nav</div>
+                  <div class="item content">content</div>
+                  <div class="item sidenav">sidenav</div>
+                  <div class="item advert">advert</div>
+                  <div class="item footer">footer</div>
+                </section>
+              </div>
+              <div>
+                <h1>items with margin</h1>
+                <section class="grid grid-template-2 column-gap">
+                  <div class="item logo">logo</div>
+                  <div class="item nav">nav</div>
+                  <div class="item content">content</div>
+                  <div class="item sidenav margin">sidenav</div>
+                  <div class="item advert">advert</div>
+                  <div class="item footer">footer</div>
+                </section>
+              </div>
+
+            </div> <!-- end block -->
+          </div> <!-- End big-block -->
+        </div> <!-- end div-->
+
+        <div>
+          <h1 class="title">Grid Container - grid-auto-columns</h1>
+          <div class="big-block  ">
+            <div class="block ">
+              <div>
+                <h1>grid-auto-columns: 100px;</h1>
+                <section class="grid auto-columns-1">
+                  <div class="item ">1</div>
+                  <div class="item ">2</div>
+                  <div class="item ">3</div>
+                  <div class="item ">4</div>
+                  <div class="item ">5</div>
+                  <div class="item item-6">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-auto-columns: 50px 100px;</h1>
+                <section class="grid auto-columns-2">
+                  <div class="item ">1</div>
+                  <div class="item ">2</div>
+                  <div class="item ">3</div>
+                  <div class="item ">4</div>
+                  <div class="item ">5</div>
+                  <div class="item item-6">6</div>
+                </section>
+              </div>
+
+            </div> <!-- end block -->
+          </div> <!-- End big-block -->
+        </div> <!-- end div-->
+
+        <div>
+          <h1 class="title">Grid Container - grid-auto-rows</h1>
+          <div class="big-block  ">
+            <div class="block ">
+              <div>
+                <h1>grid-auto-rows: 100px;</h1>
+                <section class="grid grid-auto-rows-1">
+                  <div class="item ">1</div>
+                  <div class="item ">2</div>
+                  <div class="item ">3</div>
+                  <div class="item ">4</div>
+                  <div class="item ">5</div>
+                  <div class="item ">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-auto-rows: 50x 100px;</h1>
+                <section class="grid grid-auto-rows-2">
+                  <div class="item logo">logo</div>
+                  <div class="item nav">nav</div>
+                  <div class="item content">content</div>
+                  <div class="item sidenav">sidenav</div>
+                  <div class="item advert">advert</div>
+                  <div class="item footer">footer</div>
+                  <div class="item">p</div>
+                  <div class="item">p</div>
+                  <div class="item">p</div>
+                  <div class="item">p</div>
+                  <div class="item">p</div>
+                  <div class="item">p</div>
+                  <div class="item">p</div>
+                  <div class="item">p</div>
+                </section>
+              </div>
+
+            </div> <!-- end block -->
+          </div> <!-- End big-block -->
+        </div> <!-- end div-->
+
+        <div>
+          <h1 class="title">Grid Container - grid-auto-flow</h1>
+          <div class="big-block  ">
+            <div class="block ">
+              <div>
+                <h1>grid-auto-flow: column;</h1>
+                <section class="grid grid-auto-flow-1">
+                  <div class="item ">1</div>
+                  <div class="item ">2</div>
+                  <div class="item ">3</div>
+                  <div class="item ">4</div>
+                  <div class="item ">5</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-auto-flow: column;</h1>
+                <section class="grid grid-auto-flow-2">
+                  <div class="item ">1</div>
+                  <div class="item ">2</div>
+                  <div class="item ">3</div>
+                  <div class="item ">4</div>
+                  <div class="item ">5</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-auto-flow: dense;</h1>
+                <section class="grid grid-auto-flow-3">
+                  <div class="item ">1</div>
+                  <div class="item item-2">2</div>
+                  <div class="item ">3</div>
+                  <div class="item item-4">4</div>
+                  <div class="item ">5</div>
+                  <div class="item ">6</div>
+                  <div class="item ">7</div>
+                  <div class="item ">8</div>
+                  <div class="item ">9</div>
+                </section>
+              </div>
+
+            </div> <!-- end block -->
+          </div> <!-- End big-block -->
+        </div> <!-- end div-->
+
+        <div>
+          <h1 class="title">Grid Container - grid</h1>
+          <div class="big-block  ">
+            <div class="block ">
+              <div>
+                <h1>grid: 100px / 1fr 1fr;</h1>
+                <section class="grid grid-1">
+                  <div class="item ">1</div>
+                  <div class="item ">2</div>
+                  <div class="item ">3</div>
+                  <div class="item ">4</div>
+                  <div class="item ">5</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid: 100px / auto-flow 100px 50px;</h1>
+                <section class="grid grid-2">
+                  <div class="item ">1</div>
+                  <div class="item ">2</div>
+                  <div class="item ">3</div>
+                  <div class="item ">4</div>
+                  <div class="item ">5</div>
+                </section>
+              </div>
+
+            </div> <!-- end block -->
+          </div> <!-- End big-block -->
+        </div> <!-- end div-->
+
+        <div>
+          <h1 class="title">Grid Container - justify-content</h1>
+          <div class="big-block  ">
+            <div class="block ">
+              <div>
+                <h1>justify-content: start;</h1>
+                <section class="grid grid-justify-content start">
+                  <div class="item ">1</div>
+                  <div class="item item-2-jc">2</div>
+                  <div class="item item-3-jc">3</div>
+                  <div class="item ">4</div>
+                  <div class="item item-5-jc">5</div>
+                  <div class="item ">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>justify-content: end;</h1>
+                <section class="grid grid-justify-content end">
+                  <div class="item ">1</div>
+                  <div class="item item-2-jc">2</div>
+                  <div class="item item-3-jc">3</div>
+                  <div class="item ">4</div>
+                  <div class="item item-5-jc">5</div>
+                  <div class="item ">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>justify-content: center;</h1>
+                <section class="grid grid-justify-content center">
+                  <div class="item ">1</div>
+                  <div class="item item-2-jc">2</div>
+                  <div class="item item-3-jc">3</div>
+                  <div class="item ">4</div>
+                  <div class="item item-5-jc">5</div>
+                  <div class="item ">6</div>
+                </section>
+              </div>
+
+              <div>
+                <h1>justify-content: stretch;</h1>
+                <section class="grid grid-justify-content stretch">
+                  <div class="item ">1</div>
+                  <div class="item item-2-jc">2</div>
+                  <div class="item item-3-jc">3</div>
+                  <div class="item ">4</div>
+                  <div class="item item-5-jc">5</div>
+                  <div class="item ">6</div>
+                </section>
+              </div>
+
+              <div>
+                <h1>justify-content: apace-around;</h1>
+                <section class="grid grid-justify-content space-around">
+                  <div class="item ">1</div>
+                  <div class="item item-2-jc">2</div>
+                  <div class="item item-3-jc">3</div>
+                  <div class="item ">4</div>
+                  <div class="item item-5-jc">5</div>
+                  <div class="item ">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>justify-content: space-between;</h1>
+                <section class="grid grid-justify-content space-between">
+                  <div class="item ">1</div>
+                  <div class="item item-2-jc">2</div>
+                  <div class="item item-3-jc">3</div>
+                  <div class="item ">4</div>
+                  <div class="item item-5-jc">5</div>
+                  <div class="item ">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>justify-content: space-evenly;</h1>
+                <section class="grid grid-justify-content space-evenly">
+                  <div class="item ">1</div>
+                  <div class="item item-2-jc">2</div>
+                  <div class="item item-3-jc">3</div>
+                  <div class="item ">4</div>
+                  <div class="item item-5-jc">5</div>
+                  <div class="item ">6</div>
+                </section>
+              </div>
+
+            </div> <!-- end block -->
+          </div> <!-- End big-block -->
+        </div> <!-- end div-->
+
+
+        <div>
+          <h1 class="title">Grid Container - align-content</h1>
+          <div class="big-block  ">
+            <div class="block ">
+              <div>
+                <h1>align-content: start;</h1>
+                <section class="grid grid-align-content align-content-start">
+                  <div class="item ">1</div>
+                  <div class="item item-2-jc">2</div>
+                  <div class="item item-3-jc">3</div>
+                  <div class="item ">4</div>
+                  <div class="item item-5-jc">5</div>
+                  <div class="item ">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>align-content: end;</h1>
+                <section class="grid grid-align-content align-content-end">
+                  <div class="item ">1</div>
+                  <div class="item item-2-jc">2</div>
+                  <div class="item item-3-jc">3</div>
+                  <div class="item ">4</div>
+                  <div class="item item-5-jc">5</div>
+                  <div class="item ">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>align-content: center;</h1>
+                <section class="grid grid-align-content align-content-center">
+                  <div class="item ">1</div>
+                  <div class="item item-2-jc">2</div>
+                  <div class="item item-3-jc">3</div>
+                  <div class="item ">4</div>
+                  <div class="item item-5-jc">5</div>
+                  <div class="item ">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>align-content: stretch;</h1>
+                <section class="grid grid-align-content align-content-stretch">
+                  <div class="item ">1</div>
+                  <div class="item item-2-jc">2</div>
+                  <div class="item item-3-jc">3</div>
+                  <div class="item ">4</div>
+                  <div class="item item-5-jc">5</div>
+                  <div class="item ">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>align-content: space-around;</h1>
+                <section class="grid grid-align-content align-content-space-around">
+                  <div class="item ">1</div>
+                  <div class="item item-2-jc">2</div>
+                  <div class="item item-3-jc">3</div>
+                  <div class="item ">4</div>
+                  <div class="item item-5-jc">5</div>
+                  <div class="item ">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>align-content: space-between;</h1>
+                <section class="grid grid-align-content align-content-space-between">
+                  <div class="item ">1</div>
+                  <div class="item item-2-jc">2</div>
+                  <div class="item item-3-jc">3</div>
+                  <div class="item ">4</div>
+                  <div class="item item-5-jc">5</div>
+                  <div class="item ">6</div>
+                </section>
+              </div>
+            </div> <!-- end block -->
+          </div> <!-- End big-block -->
+        </div> <!-- end div-->
+
+        <div>
+          <h1 class="title">Grid Container - justify-items</h1>
+          <div class="big-block  ">
+            <div class="block ">
+              <div>
+                <h1>justify-items: start;</h1>
+                <section class="grid grid-justify-items justify-items-start">
+                  <div class="item ">Teste 1</div>
+                  <div class="item item-2-jc">Ae 2</div>
+                  <div class="item item-3-jc">Isso 3</div>
+                  <div class="item ">ab 4</div>
+                  <div class="item item-5-jc">Aqui 5</div>
+                  <div class="item ">Lá 6</div>
+                </section>
+              </div>
+              <div>
+                <h1>justify-items: end;</h1>
+                <section class="grid grid-justify-items justify-items-end">
+                  <div class="item ">Teste 1</div>
+                  <div class="item item-2-jc">Ae 2</div>
+                  <div class="item item-3-jc">Isso 3</div>
+                  <div class="item ">ab 4</div>
+                  <div class="item item-5-jc">Aqui 5</div>
+                  <div class="item ">Lá 6</div>
+                </section>
+              </div>
+              <div>
+                <h1>justify-items: center;</h1>
+                <section class="grid grid-justify-items justify-items-center">
+                  <div class="item ">Teste 1</div>
+                  <div class="item item-2-jc">Ae 2</div>
+                  <div class="item item-3-jc">Isso 3</div>
+                  <div class="item ">ab 4</div>
+                  <div class="item item-5-jc">Aqui 5</div>
+                  <div class="item ">Lá 6</div>
+                </section>
+              </div>
+              <div>
+                <h1>justify-items: stretch;</h1>
+                <section class="grid grid-justify-items justify-items-stretch">
+                  <div class="item ">Teste 1</div>
+                  <div class="item item-2-jc">Ae 2</div>
+                  <div class="item item-3-jc">Isso 3</div>
+                  <div class="item ">ab 4</div>
+                  <div class="item item-5-jc">Aqui 5</div>
+                  <div class="item ">Lá 6</div>
+                </section>
+              </div>
+            </div> <!-- end block -->
+          </div> <!-- End big-block -->
+        </div> <!-- end div-->
+
+        <div>
+          <h1 class="title">Grid Container - align-items</h1>
+          <div class="big-block  ">
+            <div class="block ">
+              <div>
+                <h1>align-items: start;</h1>
+                <section class="grid grid-align-items align-items-start">
+                  <div class="item ">Teste 1</div>
+                  <div class="item ">Ae 2</div>
+                  <div class="item ">Isso 3</div>
+                  <div class="item ">ab 4</div>
+                  <div class="item ">Aqui 5</div>
+                  <div class="item ">Lá 6</div>
+                </section>
+              </div>
+              <div>
+                <h1>align-items: end;</h1>
+                <section class="grid grid-align-items align-items-end">
+                  <div class="item ">Teste 1</div>
+                  <div class="item ">Ae 2</div>
+                  <div class="item ">Isso 3</div>
+                  <div class="item ">ab 4</div>
+                  <div class="item ">Aqui 5</div>
+                  <div class="item ">Lá 6</div>
+                </section>
+              </div>
+              <div>
+                <h1>align-items: center;</h1>
+                <section class="grid grid-align-items align-items-center">
+                  <div class="item ">Teste 1</div>
+                  <div class="item ">Ae 2</div>
+                  <div class="item ">Isso 3</div>
+                  <div class="item ">ab 4</div>
+                  <div class="item ">Aqui 5</div>
+                  <div class="item ">Lá 6</div>
+                </section>
+              </div>
+              <div>
+                <h1>align-items: stretch;</h1>
+                <section class="grid grid-align-items align-items-stretch">
+                  <div class="item ">Teste 1</div>
+                  <div class="item ">Ae 2</div>
+                  <div class="item ">Isso 3</div>
+                  <div class="item ">ab 4</div>
+                  <div class="item ">Aqui 5</div>
+                  <div class="item ">Lá 6</div>
+                </section>
+              </div>
+
+            </div> <!-- end block -->
+          </div> <!-- End big-block -->
+        </div> <!-- end div-->
+
+      </div> <!-- End group flex -->
+    </div> <!-- End group -->
+
+    <div class="group">
+      <div class="flex column column-reverse">
+        <div>
+          <h1 class="title">Grid Item - grid-column</h1>
+          <div class="big-block ">
+            <div class="block">
+              <div>
+                <h1>grid-column</h1>
+                <section class="grid grid-items-column-1">
+                  <div class="item gi-item-1">1</div>
+                  <div class="item gi-item-2">2</div>
+                  <div class="item gi-item-3">3</div>
+                  <div class="item gi-item-4">4</div>
+                  <div class="item gi-item-5">5</div>
+                  <div class="item gi-item-6">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-column span</h1>
+                <section class="grid grid-items-column-2">
+                  <div class=" item gi-item-1">1</div>
+                  <div class="item gi-item-2">2</div>
+                  <div class="item gi-item-3">3</div>
+                  <div class="item gi-item-4">4</div>
+                  <div class="item gi-item-5">5</div>
+                  <div class="item gi-item-6">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-column-start / grid-column-end</h1>
+                <section class="grid grid-items-column-3">
+                  <div class=" item gi-item-1">1</div>
+                  <div class="item gi-item-2">2</div>
+                  <div class="item gi-item-3">3</div>
+                  <div class="item gi-item-4">4</div>
+                  <div class="item gi-item-5">5</div>
+                  <div class="item gi-item-6">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid lines alias / [col-start] / [col-end]</h1>
+                <section class="grid grid-items-column-4">
+                  <div class=" item gi-item-1">1</div>
+                  <div class="item gi-item-2">2</div>
+                  <div class="item gi-item-3">3</div>
+                  <div class="item gi-item-4">4</div>
+                  <div class="item gi-item-5">5</div>
+                  <div class="item gi-item-6">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-template-areas</h1>
+                <section class="grid grid-items-column-5">
+                  <div class=" item gi-item-1">1</div>
+                  <div class="item gi-item-2">2</div>
+                  <div class="item gi-item-3">3</div>
+                  <div class="item gi-item-4">4</div>
+                  <div class="item gi-item-5">5</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-column normal</h1>
+                <section class="grid grid-items-column-6">
+                  <div class=" item gi-item-1">1</div>
+                  <div class="item gi-item-2">2</div>
+                  <div class="item gi-item-3">3</div>
+                  <div class="item gi-item-4">4</div>
+                  <div class="item gi-item-5">5</div>
+                </section>
+              </div>
+
+            </div>
+          </div> <!-- End big-block -->
+        </div> <!-- end div-->
+
+        <div>
+          <h1 class="title">Grid Item - grid-row</h1>
+          <div class="big-block ">
+            <div class="block">
+              <div>
+                <h1>grid-row</h1>
+                <section class="grid grid-items-row-1">
+                  <div class="item gi-item-1">1</div>
+                  <div class="item gi-item-2">2</div>
+                  <div class="item gi-item-3">3</div>
+                  <div class="item gi-item-4">4</div>
+                  <div class="item gi-item-5">5</div>
+                  <div class="item gi-item-6">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-row span</h1>
+                <section class="grid grid-items-row-2">
+                  <div class="item gi-item-1">1</div>
+                  <div class="item gi-item-2">2</div>
+                  <div class="item gi-item-3">3</div>
+                  <div class="item gi-item-4">4</div>
+                  <div class="item gi-item-5">5</div>
+                  <div class="item gi-item-6">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-row-start / grid-row-end</h1>
+                <section class="grid grid-items-row-3">
+                  <div class="item gi-item-1">1</div>
+                  <div class="item gi-item-2">2</div>
+                  <div class="item gi-item-3">3</div>
+                  <div class="item gi-item-4">4</div>
+                  <div class="item gi-item-5">5</div>
+                  <div class="item gi-item-6">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid lines alias / [row1] or [row-start]</h1>
+                <section class="grid grid-items-row-4">
+                  <div class="item gi-item-1">1</div>
+                  <div class="item gi-item-2">2</div>
+                  <div class="item gi-item-3">3</div>
+                  <div class="item gi-item-4">4</div>
+                  <div class="item gi-item-5">5</div>
+                  <div class="item gi-item-6">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-template-areas</h1>
+                <section class="grid grid-items-row-5">
+                  <div class="item gi-item-1">1</div>
+                  <div class="item gi-item-2">2</div>
+                  <div class="item gi-item-3">3</div>
+                  <div class="item gi-item-4">4</div>
+                  <div class="item gi-item-5">5</div>
+                </section>
+              </div>
+            </div>
+          </div> <!-- End big-block -->
+        </div> <!-- end div-->
+
+        <div>
+          <h1 class="title">Grid Item - grid-area</h1>
+          <div class="big-block ">
+            <div class="block">
+              <div>
+                <h1>grid-area: 1 / 2 / 4 / 3;</h1>
+                <section class="grid grid-items-area-1">
+                  <div class="item gi-item-1">1</div>
+                  <div class="item gi-item-2">2</div>
+                  <div class="item gi-item-3">3</div>
+                  <div class="item gi-item-4">4</div>
+                  <div class="item gi-item-5">5</div>
+                  <div class="item gi-item-6">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-area: header;</h1>
+                <section class="grid grid-items-area-2">
+                  <div class="item gi-item-1">1</div>
+                  <div class="item gi-item-2">2</div>
+                  <div class="item gi-item-3">3</div>
+                  <div class="item gi-item-4">4</div>
+                  <div class="item gi-item-5">5</div>
+                  <div class="item gi-item-6">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>grid-area</h1>
+                <section class="grid grid-items-area-3">
+                  <div class="item gi-item-1">1</div>
+                  <div class="item gi-item-2">2</div>
+                  <div class="item gi-item-3">3</div>
+                  <div class="item gi-item-4">4</div>
+                  <div class="item gi-item-5">5</div>
+                  <div class="item gi-item-6">6</div>
+                  <div class="item gi-item-7">7</div>
+                  <div class="item gi-item-8">8</div>
+                  <div class="item gi-item-9">9</div>
+                  <div class="item gi-item-10">10</div>
+                  <div class="item gi-item-11">11</div>
+                  <div class="item gi-item-12">12</div>
+                  <div class="item gi-item-13">13</div>
+                  <div class="item gi-item-14">14</div>
+                  <div class="item gi-item-15">15</div>
+                  <div class="item gi-item-16">16</div>
+                  <div class="item gi-item-17">17</div>
+                  <div class="item gi-item-18">18</div>
+                  <div class="item gi-item-19">19</div>
+                  <div class="item gi-item-20">20</div>
+                </section>
+              </div>
+            </div>
+          </div> <!-- End big-block -->
+        </div> <!-- end div-->
+
+        <div>
+          <h1 class="title">Grid Item - justify-self</h1>
+          <div class="big-block ">
+            <div class="block">
+              <div>
+                <h1>justify-self: start;</h1>
+                <section class="grid grid-items-justify-self-1">
+                  <div class="item gi-item-1">1</div>
+                  <div class="item gi-item-2">2</div>
+                  <div class="item gi-item-3">3</div>
+                  <div class="item gi-item-4">4</div>
+                  <div class="item gi-item-5">5</div>
+                  <div class="item gi-item-6">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>justify-self: end;</h1>
+                <section class="grid grid-items-justify-self-2">
+                  <div class="item gi-item-1">1</div>
+                  <div class="item gi-item-2">2</div>
+                  <div class="item gi-item-3">3</div>
+                  <div class="item gi-item-4">4</div>
+                  <div class="item gi-item-5">Item 5</div>
+                  <div class="item gi-item-6">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>justify-self: center;</h1>
+                <section class="grid grid-items-justify-self-3">
+                  <div class="item gi-item-1">1</div>
+                  <div class="item gi-item-2">2</div>
+                  <div class="item gi-item-3">3</div>
+                  <div class="item gi-item-4">4</div>
+                  <div class="item gi-item-5">Item 5</div>
+                  <div class="item gi-item-6">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>justify-self: stretch;</h1>
+                <section class="grid grid-items-justify-self-4">
+                  <div class="item gi-item-1">1</div>
+                  <div class="item gi-item-2">2</div>
+                  <div class="item gi-item-3">3</div>
+                  <div class="item gi-item-4">4</div>
+                  <div class="item gi-item-5">Item 5</div>
+                  <div class="item gi-item-6">6</div>
+                </section>
+              </div>
+
+            </div>
+          </div> <!-- End big-block -->
+        </div> <!-- end div-->
+
+        <div>
+          <h1 class="title">Grid Item - align-self</h1>
+          <div class="big-block ">
+            <div class="block">
+              <div>
+                <h1>align-self: start;</h1>
+                <section class="grid grid-items-align-self-1">
+                  <div class="item gi-item-1">1</div>
+                  <div class="item gi-item-2">2</div>
+                  <div class="item gi-item-3">3</div>
+                  <div class="item gi-item-4">4</div>
+                  <div class="item gi-item-5">5</div>
+                  <div class="item gi-item-6">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>align-self: end;</h1>
+                <section class="grid grid-items-align-self-2">
+                  <div class="item gi-item-1">1</div>
+                  <div class="item gi-item-2">2</div>
+                  <div class="item gi-item-3">3</div>
+                  <div class="item gi-item-4">4</div>
+                  <div class="item gi-item-5">Item 5</div>
+                  <div class="item gi-item-6">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>align-self: center;</h1>
+                <section class="grid grid-items-align-self-3">
+                  <div class="item gi-item-1">1</div>
+                  <div class="item gi-item-2">2</div>
+                  <div class="item gi-item-3">3</div>
+                  <div class="item gi-item-4">4</div>
+                  <div class="item gi-item-5">Item 5</div>
+                  <div class="item gi-item-6">6</div>
+                </section>
+              </div>
+              <div>
+                <h1>align-self: stretch;</h1>
+                <section class="grid grid-items-align-self-4">
+                  <div class="item gi-item-1">1</div>
+                  <div class="item gi-item-2">2</div>
+                  <div class="item gi-item-3">3</div>
+                  <div class="item gi-item-4">4</div>
+                  <div class="item gi-item-5">Item 5</div>
+                  <div class="item gi-item-6">6</div>
+                </section>
+              </div>
+
+            </div>
+          </div> <!-- End big-block -->
+        </div> <!-- end div-->
+
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
